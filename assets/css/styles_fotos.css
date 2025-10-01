@@ -1,0 +1,123 @@
+@font-face {
+    font-family: "mansalva";
+    src: url("../webfonts/Mansalva-Regular.ttf");
+}
+@font-face {
+    font-family: "mclaren";
+    src: url("../webfonts/McLaren-Regular.ttf");
+}
+
+body{
+    /* font-family: "unageo"; */
+    background-color: #F8EFCA;
+}
+
+.nav{
+    background-color: #5D2655;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 0px 9px 0px #5D2655;
+    z-index: 100;
+}
+
+.enlaces{
+    text-decoration: none;
+    color: #F2A082;
+    padding: 7px;
+    border-radius: 5px;
+    transition-duration: 0.7s;
+    font-family: "mansalva";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.enlaces:hover{
+    background-color: #380c32;
+    scale: 1.1;
+}
+
+.seccion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 100px 40px 100px;
+    background-color: #F8DEAD;
+    padding: 10px;
+    border-radius: 10px;
+    border: 7px solid #F2A082;
+}
+
+.seccion h2{
+    width: 100%;
+    font-family: "mansalva";
+    text-align: start;
+    font-size: 30px;
+    padding-left: 8%;
+}
+
+.seccion p{
+    width: 90%;
+    text-align: left;
+    font-size: 18px;
+    font-family: "mclaren";
+}
+
+.fotos{
+    margin: 40px 100px 60px 100px;
+    background-color: #f2a082;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px 0px #e27c57;
+    padding-bottom: 20px;
+}
+
+.fotos h3{
+    font-family: "mansalva";
+    text-align: end;
+    font-size: 30px;
+    padding-right: 8%;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 150px;
+}
+
+.imagenes{
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    height: 550px;
+    box-shadow: 5px 5px 4px 0px #e27c57;
+    transition-duration: 0.5s;
+}
+
+.imagenes:hover{
+    scale: 1.05;
+}
+
+.enlace {
+    display: block; /* Evita que el <a> se comporte como texto */
+    text-decoration: none; /* Elimina subrayado en caso de imágenes con texto */
+}
+
+.imagenes a{
+    flex-grow: 1;
+    object-fit: cover;
+}
+
+.flechas{
+    transition-duration: 0.5s;
+}
+
+.flechas:hover{
+    scale: 1.30;
+}

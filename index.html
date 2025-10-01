@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" lang="es">
+    <meta name="viewport" content="width=device-width">     <!--Para adaptar la pantalla al dispositivo-->
+
+    <meta name="robots" content="index, follow">        <!--Para indexar la pagina y seguir los enlaces-->
+    <meta name="theme-color" content="#8f7ada">            <!--Para poner el color del buscador-->
+
+    <!--Herramientas de SEO-->
+    <meta name="description" content="Eski te queremos mucho">
+    
+    <!--Para el OPEN GRAPH-->
+    <meta property="og:title" content="La biografia de la niña de mis ojos">
+    <meta property="og:description" content="Para demostrarte lo muchísimo que te queremos todos">
+    <link rel="icon" href="./images/rana_eski.png" type="image/x-icon"> <!--Para poner icono a la pagina-->
+    <meta property="og:image" content="./images/icono.jpg"> <!--Para poner icono a la pagina-->
+    <meta property="og:image-alt" content="Fotografia mia">
+
+    <!--Para que cambie el idioma-->
+    <link rel="alternate" href="./index.html/en" hreflang="es-GB">
+    <!--Para indicar cual es la pagina principal-->
+    <link rel="canonical" href="./index.html">
+    <title>Te queremos</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+      @font-face {
+          font-family: "unageo";
+          src: url("assets/webfonts/Mansalva-Regular.ttf");
+
+      }
+
+      @font-face {
+        font-family: "mclaren";
+        src: url("assets/webfonts/McLaren-Regular.ttf");
+      }
+
+      body{
+        /* font-family: "unageo"; */
+        background-color: #F8EFCA;
+        overflow-x: hidden;
+      }
+
+      .nav{
+        background-color: #5D2655;
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        top: 0;
+        left: 0;
+        position: fixed;
+        width: 100%;
+        box-shadow: 0px 0px 9px 0px #5D2655;
+        z-index: 100;
+      }
+      nav a{
+        font-family: "unageo";
+        font-size: 20px;
+        font-weight: bold;
+        color: #F2A082;
+      }
+
+      .enlaces{
+          text-decoration: none;
+          padding: 7px;
+          border-radius: 5px;
+          transition-duration: 1s;
+      }
+
+      .enlaces:hover{
+          background-color: #380c32;
+          scale: 1.1;
+          
+      }
+
+      main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .seccion1{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 100px 100px 10px 100px;
+        background-color: #F8DEAD;
+        padding: 10px;
+        border-radius: 10px;
+        border: 7px solid #F2A082;
+      }
+
+      .pereira{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .rana{
+        position: absolute;
+        inset-inline-start: 78%;
+        width: 25%;
+        transform: rotate(210deg);
+        overflow: visible;
+      }
+
+      .titulo1{
+        width: 100%;
+        font-family: "unageo";
+        text-align: start;
+        font-size: 30px;
+        padding-left: 8%;
+      }
+
+      .titulo2{
+        font-family: "unageo";
+        text-align: end;
+        font-size: 30px;
+        padding-right: 5%;
+      }
+
+      .textosec{
+        width: 80%;
+        text-align: left;
+        font-size: 18px;
+        font-family: "mclaren";
+        margin-left: -8%;
+      }
+
+      .seccion2{
+        margin: 20px 100px 20px 100px;
+        background-color: #f2a082;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 4px 0px #e27c57;
+        overflow: hidden;
+        font-family: "mclaren";
+      }
+      .preguntas{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-bottom: 20px;
+      }
+
+      #quizForm{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .question{ 
+        width: 40%;
+      }
+
+      .question h3{
+        font-size: 23px;
+      }
+
+      .question label{
+        font-size: 18px;
+      }
+
+      /* From Uiverse.io by Voxybuns */ 
+      button {
+        /* Variables */
+        --button_radius: 0.75em;
+        --button_color: #e8e8e8;
+        --button_outline_color: #000000;
+        font-size: 17px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        border-radius: var(--button_radius);
+        background: var(--button_outline_color);
+      }
+
+      .button_top {
+        display: block;
+        box-sizing: border-box;
+        border: 1px solid var(--button_outline_color);
+        border-radius: var(--button_radius);
+        padding: 0.75em 1.5em;
+        background: var(--button_color);
+        color: var(--button_outline_color);
+        transform: translateY(-0.2em);
+        transition: transform 0.1s ease;
+        font-family: "mclaren";
+      }
+
+      button:hover .button_top {
+        /* Pull the button upwards when hovered */
+        transform: translateY(-0.33em);
+      }
+
+      button:active .button_top {
+        /* Push the button downwards when pressed */
+        transform: translateY(0);
+      }
+
+
+      .seccion{
+        display: flex;
+        margin: 40px 100px 100px 100px;
+        padding: 10px;
+        border-radius: 10px;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-bottom: 20px;
+        width: 60%;
+      }
+
+      .texto{
+        width: 70%;
+        text-align: center;
+      }
+
+      .imagen{
+        height: 600px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 4px 0px rgba(78, 78, 78, 0.741);
+        transition-duration: 0.7s;
+        order: 1;
+
+      }
+
+      .imagen:hover{
+        scale: 1.2;
+      }
+
+      .titulo{
+        font-family: "unageo";
+        text-align: end;
+        font-size: 30px;
+        padding-right: 5%;
+      }
+
+      .texto{
+        width: 90%;
+        text-align: left;
+        font-size: 18px;
+        font-family: "mclaren";
+      }
+
+      .divresult{
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .divresult p{
+        width: 70%;
+      }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="htmls/mensajes.html" class="enlaces">MESSAGES</a>
+            <a href="htmls/fotos.html" class="enlaces">MEMORIES</a>
+            <a href="htmls/tequiero.html" class="enlaces">AMORE</a>
+        </nav>
+    </header>
+    <main>
+        <section class="seccion1">
+          <div class="pereira">
+            <h3 class="titulo1">¿Quién es Eski?</h3>
+            <p class="textosec">Eski es mi novia, PRIMERO DE TODO. Después de eso es la chica más graciosa, guapa, divertida, alegre, creativa, enrrollada, amable, simpática, 
+                mejor fiestera, generosa, ganadora, sensible, inteligente, lista, boba, bonita, chula, confiable, decidida, fiel, educada, amiga, gruñona, idiota,
+                independiente, valiente, tímida, sincera, risueña, orgullosa y loca del mundo. Y con el peor perder que he visto nunca.</p>
+          </div>
+          <img class="rana" src="images/rana_eski.png" alt="" loading="lazy">
+        </section>
+        <section class="seccion2">
+            <h3 class="titulo2">¿Qué Eski eres?</h3>
+            <form id="quizForm">
+              <div class="preguntas">
+                <div class="question">
+                    <h3>1. ¿Qué te pondrías para ir a comprar el pan?</h3>
+                    <label><input type="radio" name="q1" value="1" required> Camiseta taller Jesús -1354 a.C</label><br>
+                    <label><input type="radio" name="q1" value="2"> MoonBoots</label><br>
+                    <label><input type="radio" name="q1" value="3"> Top de rejilla</label>
+                </div>
+              
+                <div class="question">
+                  <h3>2. Elige una acción</h3>
+                  <label><input type="radio" name="q2" value="1" required> Eskiar</label><br>
+                  <label><input type="radio" name="q2" value="2"> Eskivar</label><br>
+                  <label><input type="radio" name="q2" value="0"> Bombardear Israel</label>
+                </div>
+
+                <div class="question">
+                  <h3>3. ¿Cómo acabarías después de comer?</h3>
+                  <label><input type="radio" name="q3" value="1" required> Chica refinada no come por los ojos</label><br>
+                  <label><input type="radio" name="q3" value="2"> Como un tarzanete</label><br>
+                  <label><input type="radio" name="q3" value="0"> Como el vater después de un durum</label>
+                </div>
+              
+                <div class="question">
+                  <h3>4. ¿Cuántas veces enciendes un cigarro para fumar?</h3>
+                  <label><input type="radio" name="q4" value="1" required> 13</label><br>
+                  <label><input type="radio" name="q4" value="2"> Digo que no fumo, pero soy una locomotora a vapor</label><br>
+                  <label><input type="radio" name="q4" value="0"> 2</label>
+                </div>
+                <div class="question">
+                  <h3>5. Si vas perdidendo al Mario Kart ¿Qué haces?</h3>
+                  <label><input type="radio" name="q5" value="1" required> Agarrarle la mano al de al lado</label><br>
+                  <label><input type="radio" name="q5" value="2"> No decir nada y ponerte tryhard, y luego decir "ANDA ADELANTAME AHORA"</label><br>
+                  <label><input type="radio" name="q5" value="0"> Apagar la consola, si no gano yo no juega nadie</label>
+                </div>
+                
+                <div class="question">
+                  <h3>6. ¿Qué te llevarías a una isla desierta?</h3>
+                  <label><input type="radio" name="q6" value="1" required> El New Style Boutique</label><br>
+                  <label><input type="radio" name="q6" value="2"> Una navaja</label><br>
+                  <label><input type="radio" name="q6" value="0"> Unos conos del dia</label>
+                </div>
+
+                <div class="question">
+                  <h3>7. ¿Qué pondrías en tu lápida?</h3>
+                  <label><input type="radio" name="q7" value="1" required> Mi madre está muerta, y el coño de Belinda Washington en Sálvame</label><br>
+                  <label><input type="radio" name="q7" value="2"> ¿Sabeis que ha muerto Rozalen?</label><br>
+                  <label><input type="radio" name="q7" value="0"> Get your ass in the car</label>
+                </div>
+
+                <div class="question">
+                  <h3>8. Si entras al Burguer King y ves una bandeja con patatas ¿Qué haces?</h3>
+                  <label><input type="radio" name="q8" value="1" required> Pasas</label><br>
+                  <label><input type="radio" name="q8" value="2"> Te las comes</label><br>
+                  <label><input type="radio" name="q8" value="0"> Te las comes y te llevas los sobres de ketchup también</label>
+                </div>
+
+                <div class="question">
+                  <h3>9. Si estas en la Japan Weekend y ponen tu canción en el random dance</h3>
+                  <label><input type="radio" name="q9" value="1" required> Gritas Kihyuuuun</label><br>
+                  <label><input type="radio" name="q9" value="2"> Empujas a tres K-Popers y te pones enfrente de la cámara</label><br>
+                  <label><input type="radio" name="q9" value="0"> Gritas y saltas y se te olvida bailar la canción</label>
+                </div>
+
+                <div class="question">
+                  <h3>10. Si te para la policía y vas borracha ¿Qué haces?</h3>
+                  <label><input type="radio" name="q10" value="1" required> Darle del DNI y ser una cuidadana ejemplar</label><br>
+                  <label><input type="radio" name="q10" value="2"> Intentar pegar al policía y decir "que me sueltes hermano"</label><br>
+                  <label><input type="radio" name="q10" value="0"> Hacer un baile interpretativoal policía</label>
+                </div>
+              </div>
+              <br>
+              <br>
+
+              <button type="submit"><span class="button_top">Enviar</span></button>
+              </form>
+            <!--Eski suit oufit, eski ravera, eski estilista, eski glotona, eskiAndo, eski bailarina, eski ganadora-->
+        </section>
+        <section class="seccion" id="resultado" style="display: none;">
+          <!-- <div class="divresult">
+            <h3 class="titulo2" >Resultado: Eski suit oufit</h3>
+            <p class="textosec">Tu signo del zodiaco es Cáncer. Te gusta comerte los mocos, te quitas la piel muerta de los pies con las uñas que llevas sin cortarte desde el Baby Boom. Si fuese tu donaria tu cuerpo a la ciencia.</p>
+          </div>
+          <img class="imagen" src="images/nerea/15.jpg" loading="lazy">
+        </section> -->
+          
+      <script defer src="assets/js/formulario.js"></script>
+    </main>
+    <footer>
+        
+    </footer>
+</body>

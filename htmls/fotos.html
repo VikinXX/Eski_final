@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" lang="es">
+    <meta name="viewport" content="width=device-width">     <!--Para adaptar la pantalla al dispositivo-->
+
+    <meta name="robots" content="index, follow">        <!--Para indexar la pagina y seguir los enlaces-->
+    <meta name="theme-color" content="#8f7ada">            <!--Para poner el color del buscador-->
+
+    <!--Herramientas de SEO-->
+    <meta name="description" content="Eski eres la mejor">
+    
+    <!--Para el OPEN GRAPH-->
+    <meta property="og:title" content="La biografia de la niña de mis ojos">
+    <meta property="og:description" content="Para demostrarte lo muchísimo que te queremos todos">
+    <link rel="icon" href="./images/icono.jpg" type="image/x-icon"> <!--Para poner icono a la pagina-->
+    <meta property="og:image" content="./images/icono.jpg"> <!--Para poner icono a la pagina-->
+    <meta property="og:image-alt" content="Fotografia mia">
+
+    <!--Para que cambie el idioma-->
+    <link rel="alternate" href="../index.html/en" hreflang="es-GB">
+    <!--Para indicar cual es la pagina principal-->
+    <link rel="canonical" href="../index.html">
+    <title>Te queremos</title>
+    <link rel="stylesheet" href="../assets/css/styles_fotos.css">
+    <script defer src="../assets/js/carrusel.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="../index.html" class="enlaces">FORM</a>
+            <a href="mensajes.html" class="enlaces">MESSAGES</a>
+            <a href="tequiero.html" class="enlaces">AMORE</a>
+        </nav>
+    </header>
+    <main>
+        <section class="seccion">
+            <h2>Recuerdos de tus seres queridos</h2>
+            <p>Aquí podrás volver a un riconcito de tu cabeza para perderte y encontrar la salida cuando quieras.</p>
+        </section>
+        <section class="fotos">
+            <h3>Selecciona cuales quieres ver</h3>
+            <div class="contenedor">
+                <img id="atras" src="../images/atras.png" alt="" style="width: 5%;" onclick="atras()" class="flechas">
+            
+                <div class="imagenes" id="imagenes">
+                    <a class="enlace" href="monica.html" style="display: inline-block;"><img src="../images/monica/monica.jpg" alt="" loading="lazy" style="display: block; width: 100%; height: 100%; border-radius: 30px;"></a>
+                </div>
+
+                <img id="alante" src="../images/alante.webp" alt="" style="width: 5%;" onclick="alante()" class="flechas">
+                <div class="puntos">
+                    <div class="punto"></div>
+                    <div class="punto"></div>
+                    <div class="punto"></div>
+                </div>
+            </div>
+        </section>
+        <section>
+
+        </section>
+    </main>
+</body>

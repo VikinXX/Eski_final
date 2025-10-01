@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "mansalva";
+    src: url("../webfonts/Mansalva-Regular.ttf");
+}
+body{
+    font-family: "mansalva";
+    background-color: #F8EFCA;
+}
+
+.nav{
+    background-color: #5D2655;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 0px 9px 0px #5D2655;
+    z-index: 10;
+}
+
+.enlaces{
+    text-decoration: none;
+    color: #F2A082;
+    padding: 7px;
+    border-radius: 5px;
+    transition-duration: 0.7s;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.enlaces:hover{
+    background-color: #380c32;
+    scale: 1.1;
+}
+
+h2{
+    text-align: center;
+}
+
+.seccion{
+    margin: 100px 150px 40px 150px;
+    background-color: #F8DEAD;
+    padding: 10px;
+    border-radius: 10px;
+    border: 7px solid #F2A082;
+}
+
+.seccion h2{
+    font-size: 40px;
+    margin: 4px;
+}
+
+.imagenes {
+    box-sizing: border-box;
+    display: grid; /* Usamos Grid para distribuir las imágenes */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Configura un número flexible de columnas */
+    gap: 10px; /* Espacio entre las imágenes */
+    padding: 20px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagen{
+    width: 100%;
+    height: auto; /* Mantiene las proporciones de la imagen */
+    object-fit: cover; /* Asegura que las imágenes cubran el espacio sin deformarse */
+    border-radius: 6px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    z-index: 8;
+    transition-duration: 0.3s;
+}
+
+.imagen.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: 0.3s;
+}
+
+.imagen.visible:hover {
+    z-index: 9;
+    transform: translateY(0) scale(1.4); /* zoom al hacer hover */
+    transition: transform 0.3s ease; /* transición rápida para el zoom */
+}
+
+.div1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+}

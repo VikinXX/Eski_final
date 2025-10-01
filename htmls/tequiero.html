@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- @author Xuxeski-->
+<head>
+    <meta charset="UTF-8" lang="es">
+    <meta name="viewport" content="width=device-width">     <!--Para adaptar la pantalla al dispositivo-->
+
+    <meta name="robots" content="index, follow">        <!--Para indexar la pagina y seguir los enlaces-->
+    <meta name="theme-color" content="#8f7ada">            <!--Para poner el color del buscador-->
+
+    <!--Herramientas de SEO-->
+    <meta name="description" content="Eski eres la mejor">
+    
+    <!--Para el OPEN GRAPH-->
+    <meta property="og:title" content="La biografia de la niña de mis ojos">
+    <meta property="og:description" content="Para demostrarte lo muchísimo que te queremos todos">
+    <link rel="icon" href="../images/rana_eski.png" type="image/x-icon"> <!--Para poner icono a la pagina-->
+    <meta property="og:image" content="../images/icono.png"> <!--Para poner icono a la pagina-->
+    <meta property="og:image-alt" content="Fotografia mia">
+
+    <!--Para que cambie el idioma-->
+    <link rel="alternate" href="../index.html/en" hreflang="es-GB">
+    <!--Para indicar cual es la pagina principal-->
+    <link rel="canonical" href="../index.html">
+    <title>Te quiero</title>
+    <link rel="stylesheet" href="../assets/css/styles_tequiero.css">
+    <script defer src="../assets/js/tequiero.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="../index.html" class="enlaces">FORM</a>
+            <a href="mensajes.html" class="enlaces">MESSAGES</a>
+            <a href="fotos.html" class="enlaces">MEMORIES</a>
+        </nav>
+    </header>
+    <main id="main">
+        <section class="seccion">
+            <form class="formulario" action="" method="post" id="quizForm">
+                <div class="preguntas">
+                    <label class="l1" for="user">Introduce el nombre de usuario:</label><br>
+                    <input class="input-style" type="text" name="user" id="user" placeholder="Para encontrar lo que deseas hay que buscar dentro" required><br><br>
+
+                    <label class="l2" for="password">Introduce la contraseña:</label><br>
+                    <input class="input-style" type="text" name="password" id="passwd" placeholder="¿Cuál eres?, ¿Cuántas personas?, Vejez" required><br><br>
+                </div>
+                <button type="submit" onclick="todo()"><span class="button_top">Enviar</span></button>
+            </form>
+        </section>
+        
+    </main>
+</body>

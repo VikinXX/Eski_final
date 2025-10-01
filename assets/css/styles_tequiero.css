@@ -1,0 +1,243 @@
+@font-face {
+    font-family: "mansalva";
+    src: url("../webfonts/Mansalva-Regular.ttf");
+}
+@font-face {
+    font-family: "mclaren";
+    src: url("../webfonts/McLaren-Regular.ttf");
+}
+body{
+
+    background-color: #F8EFCA;
+}
+
+.nav{
+    background-color: #5D2655;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 0px 9px 0px #5D2655;
+    z-index: 10;
+}
+
+.enlaces{
+    text-decoration: none;
+    color: #F2A082;
+    padding: 7px;
+    border-radius: 5px;
+    transition-duration: 0.7s;
+    font-family: "mansalva";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.enlaces:hover{
+    background-color: #380c32;
+    scale: 1.1;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion{
+    margin: 100px 100px 40px 100px;
+    background-color: #f2a082;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px 0px #e27c57;
+    box-sizing: border-box;
+    width: 27%;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+}
+.preguntas{
+    width: 100%;
+}
+
+.input-style {
+    padding: 10px;
+    border: 2px solid #f2a082;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "mclaren";
+}
+
+.input-style:focus {
+    border-color: #f16836;
+    box-shadow: 0 0 0 0.2rem #f1683634;
+}
+
+form label{
+    font-family: "mclaren";
+    font-size: 18px;
+    width: 100%;
+}
+
+.l2{
+    align-self: flex-end;
+}
+
+button {
+    /* Variables */
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
+
+.button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.75em 1.5em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+    font-family: "mclaren";
+}
+
+button:hover .button_top {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+}
+
+button:active .button_top {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+}
+
+.seccion1{
+    margin: 20px 100px 40px 100px;
+    background-color: #f2a082;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px 0px #e27c57;
+    box-sizing: border-box;
+}
+
+.ristra{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 550px;
+    align-content: space-around;
+    overflow: auto;
+}
+
+li{
+    width: 30%;
+    text-align: left;
+}
+
+h2{
+    padding: 5px;
+    text-align: center;
+}
+
+.seccion1{
+    margin: 100px 150px 40px 150px;
+    background-color: #f2a082;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px 0px #e27c57;
+    width: 80%;
+
+}
+
+.seccion1 h2{
+    font-family: "mansalva";
+    font-size: 27px;
+}
+
+li{
+    font-family: "mclaren";
+    font-size: 15px;
+}
+
+ol li::marker {
+    font-family: "mansalva";
+    font-size: 13px;
+    color: #F8DEAD;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.seccion2{
+    margin: 20px 150px 40px 150px;
+    background-color: #F8DEAD;
+    padding: 10px;
+    border-radius: 10px;
+    border: 7px solid #F2A082;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+.seccion2 h2{
+    font-family: "mansalva";
+    font-size: 30px;
+}
+
+.imagenes {
+    box-sizing: border-box;
+    display: grid; /* Usamos Grid para distribuir las imágenes */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Configura un número flexible de columnas */
+    gap: 10px; /* Espacio entre las imágenes */
+    padding: 20px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagen{
+    width: 100%;
+    height: auto; /* Mantiene las proporciones de la imagen */
+    object-fit: cover; /* Asegura que las imágenes cubran el espacio sin deformarse */
+    border-radius: 6px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    z-index: 8;
+    transition-duration: 0.3s;
+}
+
+.imagen.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: 0.3s;
+}
+
+.imagen.visible:hover {
+    z-index: 9;
+    transform: translateY(0) scale(1.4); /* zoom al hacer hover */
+    transition: transform 0.3s ease; /* transición rápida para el zoom */
+}
+
+.div1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+}

@@ -1,0 +1,212 @@
+@font-face {
+    font-family: "unageo";
+    src: url("assets/webfonts/Mansalva-Regular.ttf");
+}
+
+@font-face {
+font-family: "mclaren";
+src: url("assets/webfonts/McLaren-Regular.ttf");
+}
+
+body{
+    /* font-family: "unageo"; */
+    background-color: #F8EFCA;
+}
+
+.nav{
+    background-color: #5D2655;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 0px 9px 0px #5D2655;
+    z-index: 100;
+}
+nav a{
+    font-family: "unageo";
+    font-size: 20px;
+    font-weight: bold;
+    color: #F2A082;
+}
+
+.enlaces{
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 5px;
+    transition-duration: 1s;
+}
+
+.enlaces:hover{
+    background-color: #380c32;
+    scale: 1.1;
+    
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 100px 10px 100px;
+    background-color: #F8DEAD;
+    padding: 10px;
+    border-radius: 10px;
+    border: 7px solid #F2A082;
+}
+
+.titulo1{
+    width: 100%;
+    font-family: "unageo";
+    text-align: start;
+    font-size: 30px;
+    padding-left: 8%;
+}
+
+.titulo2{
+    font-family: "unageo";
+    text-align: end;
+    font-size: 30px;
+    padding-right: 5%;
+}
+
+.textosec{
+    width: 90%;
+    text-align: left;
+    font-size: 18px;
+    font-family: "mclaren";
+}
+
+.seccion2{
+    margin: 20px 100px 20px 100px;
+    background-color: #f2a082;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px 0px #e27c57;
+    overflow: hidden;
+    font-family: "mclaren";
+}
+.preguntas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+#quizForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.question{ 
+    width: 40%;
+}
+
+.question h3{
+    font-size: 23px;
+}
+
+.question label{
+    font-size: 18px;
+}
+
+/* From Uiverse.io by Voxybuns */ 
+button {
+/* Variables */
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+}
+
+.button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.75em 1.5em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+    font-family: "mclaren";
+}
+
+button:hover .button_top {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+}
+
+button:active .button_top {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+}
+
+
+.seccion{
+    display: flex;
+    margin: 40px 100px 100px 100px;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 20px;
+    width: 60%;
+}
+
+.texto{
+    width: 70%;
+    text-align: center;
+}
+
+.imagen{
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 4px 0px rgba(78, 78, 78, 0.741);
+    transition-duration: 0.7s;
+    order: 1;
+}
+
+.imagen:hover{
+    scale: 1.2;
+}
+
+.titulo{
+    font-family: "unageo";
+    text-align: end;
+    font-size: 30px;
+    padding-right: 5%;
+}
+
+.texto{
+    width: 90%;
+    text-align: left;
+    font-size: 18px;
+    font-family: "mclaren";
+}
+
+.divresult{
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divresult p{
+    width: 70%;
+}
